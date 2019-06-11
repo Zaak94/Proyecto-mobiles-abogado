@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "749804274322",
+    "firebase_url": "https://abogadomovil-9f7bd.firebaseio.com",
+    "project_id": "abogadomovil-9f7bd",
+    "storage_bucket": "abogadomovil-9f7bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:749804274322:android:2d4dc7ad4aec4e42",
+        "android_client_info": {
+          "package_name": "com.example.abogadomovil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "749804274322-2okjfe6kkqfpirki120bn26q56itg46o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.abogadomovil",
+            "certificate_hash": "1079927026d8bbdcbda62fd50aa8091cbb9bcf06"
+          }
+        },
+        {
+          "client_id": "749804274322-m4nctdb1ajlumi72mo0vt3dta4mh9mp4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBb5HYWNlnqazSQi31TRaZLP7KWFv83Mqo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "749804274322-m4nctdb1ajlumi72mo0vt3dta4mh9mp4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
