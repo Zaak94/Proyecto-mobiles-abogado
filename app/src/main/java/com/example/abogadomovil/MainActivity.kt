@@ -4,6 +4,9 @@ import android.app.Activity
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.constraint.ConstraintLayout
+import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
@@ -19,8 +22,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.cliente)
 
+
         providers = Arrays.asList<AuthUI.IdpConfig>(
             AuthUI.IdpConfig.EmailBuilder().build(),
+            AuthUI.IdpConfig.GoogleBuilder().build(),
             AuthUI.IdpConfig.PhoneBuilder().build()
         )
 
@@ -45,8 +50,16 @@ class MainActivity : AppCompatActivity() {
             if (resultCode == Activity.RESULT_OK){
                 val user = FirebaseAuth.getInstance().currentUser
                 //Toast.makeText(this,""+user!!.email, Toast.LENGTH_SHORT).show()
-                Toast.makeText(this,"  Bienvenido \n"+user!!.displayName, Toast.LENGTH_SHORT).show()
+                if(user!!.displayName == null){
+                    Toast.makeText(this,"  Bienvenid@ Usuario", Toast.LENGTH_SHORT).show()
+                    btn_sign_out.isEnabled = true
+                    logotipo.isEnabled=true
+                }
+                else{
+                Toast.makeText(this,"  Bienvenid@ \n"+user.displayName, Toast.LENGTH_SHORT).show()
                 btn_sign_out.isEnabled = true
+                    logotipo.isEnabled=true
+                }
             }
             else{
                 Toast.makeText(this, ""+response!!.error!!.message, Toast.LENGTH_SHORT).show()

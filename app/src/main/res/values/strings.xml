@@ -2,4 +2,9 @@
     <string name="app_name">AbogadoMovil</string>
     <string name="salir_de_la_plaicaci_n">Salir de la plaicación</string>
     <string name="logogoogle">TODO</string>
+    <string name="textview">TextView</string>
+    <string name="nombre">Nombre</string>
+    <string name="bienvenido">Bienvenido a la app \n EL BUHO JUSTO</string>
+
+    <string name="todo">TODO</string>
 </resources>
