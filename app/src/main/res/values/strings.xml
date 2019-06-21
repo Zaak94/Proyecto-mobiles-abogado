@@ -7,4 +7,6 @@
     <string name="bienvenido">Bienvenido a la app \n EL BUHO JUSTO</string>
 
     <string name="todo">TODO</string>
+    <string name="ingrese_la_descripcion_del_problma">Ingrese la descripcion del problma</string>
+    <string name="enviar">Enviar</string>
 </resources>

@@ -28,14 +28,32 @@
         android:layout_marginStart="10dp" android:id="@+id/title"
         android:layout_marginTop="13dp" android:visibility="visible" android:height="24dp"
         android:textSize="30sp"/>
-</LinearLayout>
-<Button
-    android:text="@string/salir_de_la_plaicaci_n"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    tools:layout_editor_absoluteY="623dp"
-    tools:layout_editor_absoluteX="92dp"
-    android:id="@+id/btn_sign_out"
-    android:layout_marginBottom="11dp"/>
+
+    </LinearLayout>
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="261dp"
+            android:inputType="textPersonName"
+            android:text="@string/ingrese_la_descripcion_del_problma"
+            android:ems="10"
+            android:id="@+id/descripcion"
+            android:autofillHints=""
+            tools:targetApi="o"/>
+
+    <Button
+            android:text="@string/enviar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/enviar"/>
+
+    <Button
+            android:text="@string/salir_de_la_plaicaci_n"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="623dp"
+            tools:layout_editor_absoluteX="92dp"
+            android:id="@+id/btn_sign_out"
+            android:layout_marginBottom="11dp"/>
 
 </LinearLayout>

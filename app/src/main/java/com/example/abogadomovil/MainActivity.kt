@@ -6,11 +6,14 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.constraint.ConstraintLayout
 import android.view.View
+import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.cliente.*
 import java.util.*
 
@@ -54,6 +57,8 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this,"  Bienvenid@ Usuario", Toast.LENGTH_SHORT).show()
                     btn_sign_out.isEnabled = true
                     logotipo.isEnabled=true
+
+
                 }
                 else{
                 Toast.makeText(this,"  Bienvenid@ \n"+user.displayName, Toast.LENGTH_SHORT).show()
@@ -64,7 +69,22 @@ class MainActivity : AppCompatActivity() {
             else{
                 Toast.makeText(this, ""+response!!.error!!.message, Toast.LENGTH_SHORT).show()
             }
+
         }
+
+        var descripcion: EditText
+        var envio: Button
+        val ref = FirebaseDatabase.getInstance().getReference("casos")
+        val enid = ref.push().key
+        descripcion = findViewById(R.id.descripcion)
+        val enviar= descripcion.text.toString().trim()
+        envio = findViewById(R.id.enviar)
+        envio.setOnClickListener {
+            ref.child(enid!!).setValue(enviar).addOnCompleteListener {
+                Toast.makeText(applicationContext, "Se ha enviado tu caso", Toast.LENGTH_LONG).show()
+            }
+        }
+
     }
 
     private fun showSignInOptions(){
